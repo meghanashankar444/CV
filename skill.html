@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Meghana</title>
+  <link rel="stylesheet" href="portfolio.css"> <!-- reuse the same CSS -->
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="accent">Meghana</span> S
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html" class="active">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container">
+    <h1 class="accent">My Skills</h1>
+    <div class="skills-grid">
+
+      <div class="skill-item">
+        <h3>HTML & CSS</h3>
+        <p>Building responsive layouts and designing modern websites.</p>
+      </div>
+
+      <div class="skill-item">
+        <h3>JavaScript</h3>
+        <p>Interactive front-end development, DOM manipulation, and event handling.</p>
+      </div>
+
+      <div class="skill-item">
+        <h3>Python & Flask</h3>
+        <p>Backend development, API creation, and database integration.</p>
+      </div>
+
+      <div class="skill-item">
+        <h3>MySQL</h3>
+        <p>Database design, queries, and efficient data management.</p>
+      </div>
+
+     
+
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
