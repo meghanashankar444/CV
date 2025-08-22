@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Meghana</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="accent">Meghana</span> S
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="container">
+    <h2 class="accent">Portfolio</h2>
+    <div class="portfolio-grid">
+
+      <!-- Project 1 -->
+      <div class="portfolio-item">
+        <img src="cms.png" alt="Complaint Management System">
+        <h1>Complaint Management System</h1>
+        <p>A web app built with Flask and MySQL to handle client complaints efficiently.</p>
+        <span class="tech">Flask, MySQL, Python, JavaScript, CSS</span>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-item">
+        <img src="shcs.png" alt="Doctor Booking">
+        <h1>A smart health consultancy system</h1>
+        <p>An appointment booking system with admin panel and email notifications.</p>
+        <span class="tech">HTML, CSS, JavaScript, MySQL</span>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.nav-links a');
+  const current = location.pathname.split("/").pop(); // get current filename
+  links.forEach(link => {
+    if(link.getAttribute('href') === current) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
