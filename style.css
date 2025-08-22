@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #f3e7e9);
+  color: #2c3e50;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #a97436;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+header nav ul li a.contact-btn {
+  background: #6b4f2c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 10%;
+}
+.hero-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 5px solid #d6c5b8;
+  object-fit: cover;
+}
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero-text h1 span {
+  color: #a97436;
+}
+.hero-text h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.hero-text h2 .highlight {
+  color: #6b4f2c;
+  font-weight: bold;
+}
+.hero-text p {
+  max-width: 500px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  margin-bottom: 20px;
+}
+.social-links a {
+  color: #333;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  color: #6b4f2c;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: #6b4f2c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #a97436;
+}
