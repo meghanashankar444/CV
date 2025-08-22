@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Meghana</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="accent">Meghana</span> S
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h1>About Me</h1>
+    <h2>Who Am I?</h2>
+    <p>
+      Hi! I'm <span>Meghana</span>, a passionate and creative developer who loves
+      building interactive and user-friendly applications. With a strong interest
+      in web technologies, I aim to craft clean, responsive, and impactful designs
+      that make a difference.
+    </p>
+    <p>
+      I specialize in front-end development, modern UI/UX design, and creating
+      smooth digital experiences. Outside of coding, I enjoy learning new skills
+      and exploring creative ideas.
+    </p>
+    <!-- Backend Theory Section -->
+  <p>
+    I also have a solid understanding of <span>backend development</span>. I enjoy
+    working with server-side technologies, databases, and APIs to ensure that
+    applications are robust, secure, and scalable. My experience includes
+    building RESTful APIs, handling data management, and integrating
+    front-end interfaces with backend services for seamless user experiences.
+  </p>
+    <a href="mresume.pdf" class="cv-btn">Download CV</a>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
